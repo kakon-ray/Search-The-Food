@@ -74,8 +74,9 @@ function mailIdDetails(data) {
 }
 
 // Enter Button Click search value show
-window.addEventListener("keyup", function (event) {
-  if (event.keyCode === 13) {
+const searchFild = document.getElementById("search-fild");
+searchFild.addEventListener("keypress", function (event) {
+  if (event.keyCode == 13) {
     document.getElementById("button").click();
   }
 });
