@@ -1,6 +1,7 @@
 function searchFood() {
   const searchFild = document.getElementById("search-fild");
   const searchText = searchFild.value;
+
   if (searchText == "") {
     document.getElementById("noresult").innerText = "Please Input Some Value";
     const foodDetails = document.getElementById("food-details");
@@ -71,3 +72,10 @@ function mailIdDetails(data) {
     detailsContaienr.appendChild(div);
   });
 }
+
+// Enter Button Click search value show
+window.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    document.getElementById("button").click();
+  }
+});
